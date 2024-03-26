@@ -1,6 +1,10 @@
 import { NavLink, Link } from "react-router-dom";
+import "./Header.css";
 
 const Nav = () => {
+  const activeLink =
+    "bg-transparent text-green-600 font-bold border border-2 border-green-600";
+  const normalLink = "";
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="navbar bg-base-100">
@@ -27,9 +31,7 @@ const Nav = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink to={"/"} className={`bg-transparent`}>
-                  Home
-                </NavLink>
+                <NavLink to={"/"}>Home</NavLink>
               </li>
 
               <li>
@@ -47,20 +49,41 @@ const Nav = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink to={"/"}>Home</NavLink>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Home
+              </NavLink>
             </li>
 
             <li>
-              <NavLink to={"/listedbook"}>Listed Books</NavLink>
+              <NavLink
+                to={"/listedbook"}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Listed Books
+              </NavLink>
             </li>
             <li>
-              <NavLink to={"/pagetoread"}>Page to Read</NavLink>
+              <NavLink
+                to={"/pagetoread"}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Page to Read
+              </NavLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn mr-2 bg-[#23BE0A] text-white">LogIn</a>
-          <a className="btn">SingUp</a>
+          <a className="btn mr-2 bg-[#23BE0A] text-white">Sign In</a>
+          <a className="btn bg-[#59C6D2] text-white">Sing Up</a>
         </div>
       </div>
     </div>

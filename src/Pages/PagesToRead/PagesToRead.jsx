@@ -55,10 +55,10 @@ const PagesToRead = () => {
   // ================================
 
   return (
-    <div className="text-center">
+    <div className="max-w-7xl mx-auto mt-10 bg-[#F8F8F8] p-8 rounded-2xl">
       <BarChart
-        width={500}
-        height={300}
+        width={1200}
+        height={400}
         data={mappedData}
         margin={{
           top: 20,
