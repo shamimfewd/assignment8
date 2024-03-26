@@ -11,7 +11,7 @@ const FeaturedBooks = () => {
   return (
     <>
       <div className="text-center">
-        <h2 className="font-bold text-4xl my-24">Book</h2>
+        <h2 className="font-bold text-4xl my-24">Books</h2>
       </div>
       <div className="grid lg:grid-cols-3 gap-6">
         {featuredBooks.map((book) => (

@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-200 rounded-2xl">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
@@ -14,9 +16,11 @@ const Hero = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn bg-[#23BE0A] text-white font-bold">
-              View The List
-            </button>
+            <Link to={"/listedbook"}>
+              <button className="btn bg-[#23BE0A] text-white font-bold">
+                View The List
+              </button>
+            </Link>
           </div>
         </div>
       </div>
