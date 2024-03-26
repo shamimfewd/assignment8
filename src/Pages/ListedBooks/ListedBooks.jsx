@@ -41,7 +41,7 @@ const ListedBooks = () => {
   }, [books]);
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center bg-[#F3F3F3] rounded-2xl">
         <h2 className="font-bold text-4xl p-6">Books</h2>
       </div>

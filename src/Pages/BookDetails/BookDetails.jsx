@@ -34,11 +34,11 @@ const BookDetails = () => {
   };
 
   const handleWishListBtn = () => {
-    setWishlistDataInLocalStorage(parIn)
+    setWishlistDataInLocalStorage(parIn);
     toast.success("Successfully Added on Wishlist Page");
   };
   return (
-    <div className="max-w-7xl mx-auto my-10">
+    <div className="max-w-7xl mx-auto my-10 px-4 sm:px-6 lg:px-8">
       <div className="card p-8 lg:card-side bg-base-100 shadow-xl">
         <figure>
           <img

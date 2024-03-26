@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -27,7 +27,9 @@ const Nav = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink to={"/"}>Home</NavLink>
+                <NavLink to={"/"} className={`bg-transparent`}>
+                  Home
+                </NavLink>
               </li>
 
               <li>
@@ -57,7 +59,8 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn mr-2 bg-[#23BE0A] text-white">LogIn</a>
+          <a className="btn">SingUp</a>
         </div>
       </div>
     </div>

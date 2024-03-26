@@ -1,6 +1,7 @@
 import { GrLocation } from "react-icons/gr";
 import { LuUsers } from "react-icons/lu";
 import { FaBook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Card = ({ book }) => {
   const {
@@ -28,11 +29,11 @@ const Card = ({ book }) => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">{bookName}</h2>
-            <p>By: {author}</p>
+            <h2 className="card-title text-[#000000ed]">{bookName}</h2>
+            <p className="font-bold text-[#131313cb]">By: {author}</p>
             <div className="flex items-center">
               <div className="flex items-center">
-                <span className="font-bold">Tags</span>
+                <span className="font-bold text-[#131313cb]">Tags</span>
                 {tags.map((tag, index) => (
                   <div
                     key={index}
@@ -42,13 +43,15 @@ const Card = ({ book }) => {
                   </div>
                 ))}
               </div>
-              <p className="font-bold text-[#131313ed] flex items-center space-x-2">
+              <p className="font-bold text-[#131313cb] flex items-center gap-x-2">
                 <GrLocation />
-                Year of Publishing:{" "}
-                <span className="text-[#000000e7]">{yearOfPublishing}</span>
+
+                <span className="text-[#131313cb]">
+                  Year of Publishing: {yearOfPublishing}
+                </span>
               </p>
             </div>
-            <div className="flex gap-4 font-bold">
+            <div className="flex gap-4 font-bold text-[#131313cb]">
               <h4 className="flex gap-x-2 items-center">
                 <LuUsers /> <span>Publisher: {publisher}</span>
               </h4>
@@ -66,9 +69,11 @@ const Card = ({ book }) => {
                   Rating: {rating}
                 </h4>
               </div>
-              <button className="btn rounded-full bg-[#23BE0A] text-white">
-                View Details
-              </button>
+              <Link to={`/book/${bookId}`}>
+                <button className="btn rounded-full bg-[#23BE0A] text-white">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
         </div>
