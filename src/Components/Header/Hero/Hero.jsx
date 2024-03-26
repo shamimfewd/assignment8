@@ -14,7 +14,9 @@ const Hero = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn bg-[#23BE0A] text-white font-bold">
+              View The List
+            </button>
           </div>
         </div>
       </div>

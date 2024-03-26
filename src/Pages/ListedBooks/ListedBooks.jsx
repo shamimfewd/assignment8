@@ -1,9 +1,8 @@
 
-
 const ListedBooks = () => {
     return (
         <div>
-            <h1>listed book</h1>
+            <h1>Listed books</h1>
         </div>
     );
 };
