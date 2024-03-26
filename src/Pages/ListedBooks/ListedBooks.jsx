@@ -5,6 +5,7 @@ import { getDataFromLocalStorage } from "../../Utility/LocalStorage";
 import WishList from "./WishList/WishList";
 import { getWishlistDataFromLocalStorage } from "../../Utility/LocalStorWishList";
 
+
 const ListedBooks = () => {
   const books = useLoaderData();
   const [displayBooks, setDisplayBooks] = useState([]);
@@ -24,6 +25,8 @@ const ListedBooks = () => {
       setDisplayBooks(display);
     }
   }, [books]);
+
+  
 
   // Wishlist books--------------
   useEffect(() => {
@@ -46,6 +49,7 @@ const ListedBooks = () => {
         <h2 className="font-bold text-4xl p-6">Books</h2>
       </div>
       {/* sort button */}
+      
       <div className="text-center mt-4">
         <select className="select shadow-none border-none outline-none font-bold bg-[#23BE0A] text-white px-4 py-2 rounded-md">
           <option disabled selected>

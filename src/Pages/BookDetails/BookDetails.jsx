@@ -25,7 +25,8 @@ const BookDetails = () => {
   } = currentBook;
 
   const handleReadBookBtn = () => {
-    const added = setDataInLocalStorage(parIn, "read");
+    
+    const added = setDataInLocalStorage(parIn);
     if (added) {
       alert("already");
     } else {
