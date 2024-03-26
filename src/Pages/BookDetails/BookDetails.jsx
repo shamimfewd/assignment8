@@ -1,10 +1,16 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { setDataInLocalStorage } from "../../Utility/LocalStorage";
+import { setWishlistDataInLocalStorage } from "../../Utility/LocalStorWishList";
 
 const BookDetails = () => {
   const books = useLoaderData();
   const { bookId } = useParams();
 
-  const test = books.find((book) => book.bookId == bookId);
+  const parIn = parseInt(bookId);
+  const currentBook = books.find((book) => book.bookId == parIn);
+
   const {
     bookName,
     author,
@@ -16,8 +22,21 @@ const BookDetails = () => {
     rating,
     tags,
     yearOfPublishing,
-  } = test;
+  } = currentBook;
 
+  const handleReadBookBtn = () => {
+    const added = setDataInLocalStorage(parIn, "read");
+    if (added) {
+      alert("already");
+    } else {
+      toast.success("Successfully Added on Read Page");
+    }
+  };
+
+  const handleWishListBtn = () => {
+    setWishlistDataInLocalStorage(parIn)
+    toast.success("Successfully Added on Wishlist Page");
+  };
   return (
     <div className="max-w-7xl mx-auto my-10">
       <div className="card p-8 lg:card-side bg-base-100 shadow-xl">
@@ -72,11 +91,22 @@ const BookDetails = () => {
             </div>
           </div>
           <div className="card-actions mt-24">
-            <button className="btn bg-transparent border">Read</button>
-            <button className="btn bg-[#50B1C9] text-white">Wish List</button>
+            <button
+              onClick={handleReadBookBtn}
+              className="btn bg-transparent border"
+            >
+              Read
+            </button>
+            <button
+              onClick={handleWishListBtn}
+              className="btn bg-[#50B1C9] text-white"
+            >
+              Wish List
+            </button>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
