@@ -1,4 +1,5 @@
 import { toast } from "react-toastify";
+import { getDataFromLocalStorage } from "./LocalStorage";
 
 const getWishlistDataFromLocalStorage = () => {
   const getData = localStorage.getItem("wishlist-books");
@@ -9,14 +10,20 @@ const getWishlistDataFromLocalStorage = () => {
 };
 
 const setWishlistDataInLocalStorage = (bookId) => {
-  const storedData = getWishlistDataFromLocalStorage();
-  const exist = storedData.find((dataId) => dataId === bookId);
-  if (!exist) {
-    toast("Already Exist");
+  const readData = getDataFromLocalStorage();
+  const readDataExist = readData.find((dataId) => dataId === bookId);
+  if (readDataExist) {
+    toast("Already Read The Book");
   } else {
-    storedData.push(bookId);
-    localStorage.setItem("wishlist-books", JSON.stringify(storedData));
-    toast.success("Added The Book On Wish List");
+    const storedData = getWishlistDataFromLocalStorage();
+    const exist = storedData.find((dataId) => dataId === bookId);
+    if (exist) {
+      toast("Already Exist on Wish List");
+    } else {
+      storedData.push(bookId);
+      localStorage.setItem("wishlist-books", JSON.stringify(storedData));
+      toast.success("Added The Book To Wish List");
+    }
   }
 };
 

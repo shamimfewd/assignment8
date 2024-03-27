@@ -12,11 +12,11 @@ const setDataInLocalStorage = (bookId) => {
   const storedData = getDataFromLocalStorage();
   const exist = storedData.find((dataId) => dataId === bookId);
   if (exist) {
-    toast("Book Already Exist");
+    toast("Book Already Exist on Book List");
   } else {
     storedData.push(bookId);
     localStorage.setItem("read-books", JSON.stringify(storedData));
-    toast.success("Added The Book On Book List");
+    toast.success("Added The Book To Book List");
   }
 };
 

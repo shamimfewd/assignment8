@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 import { setDataInLocalStorage } from "../../Utility/LocalStorage";
 import { setWishlistDataInLocalStorage } from "../../Utility/LocalStorWishList";
@@ -96,6 +96,9 @@ const BookDetails = () => {
             >
               Wish List
             </button>
+            <Link to={"/"}>
+              <button className="btn btn-primary text-white">Go Back</button>
+            </Link>
           </div>
         </div>
       </div>

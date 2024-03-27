@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Nav = () => {
   const activeLink =
-    "bg-transparent text-green-600 font-bold border border-2 border-green-600";
+    "bg-transparent text-green-500  border border-2 hover:text-white hover:bg-green-500 border-green-500";
   const normalLink = "";
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,18 +31,42 @@ const Nav = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink to={"/"}>Home</NavLink>
+                <NavLink
+                  to={"/"}
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
+                  Home
+                </NavLink>
               </li>
 
               <li>
-                <NavLink to={"/listedbook"}>Listed Books</NavLink>
+                <NavLink
+                  to={"/listedbook"}
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
+                  Listed Books
+                </NavLink>
               </li>
               <li>
-                <NavLink to={"/pagetoread"}>Page to Read</NavLink>
+                <NavLink
+                  to={"/pagetoread"}
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
+                  Page to Read
+                </NavLink>
               </li>
             </ul>
           </div>
-          <Link to={"/"} className="btn btn-ghost text-xl font-bold">
+          <Link
+            to={"/"}
+            className="btn btn-ghost text-xl font-bold text-[#23BE0A]"
+          >
             Book Vibe
           </Link>
         </div>
