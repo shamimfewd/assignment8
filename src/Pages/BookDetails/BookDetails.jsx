@@ -1,6 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import { setDataInLocalStorage } from "../../Utility/LocalStorage";
 import { setWishlistDataInLocalStorage } from "../../Utility/LocalStorWishList";
 
@@ -25,18 +24,11 @@ const BookDetails = () => {
   } = currentBook;
 
   const handleReadBookBtn = () => {
-    
-    const added = setDataInLocalStorage(parIn);
-    if (added) {
-      alert("already");
-    } else {
-      toast.success("Successfully Added on Read Page");
-    }
+    setDataInLocalStorage(parIn);
   };
 
   const handleWishListBtn = () => {
     setWishlistDataInLocalStorage(parIn);
-    toast.success("Successfully Added on Wishlist Page");
   };
   return (
     <div className="max-w-7xl mx-auto my-10 px-4 sm:px-6 lg:px-8">
@@ -107,7 +99,6 @@ const BookDetails = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 };

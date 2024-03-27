@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getDataFromLocalStorage = () => {
   const getData = localStorage.getItem("read-books");
   if (getData) {
@@ -9,9 +11,12 @@ const getDataFromLocalStorage = () => {
 const setDataInLocalStorage = (bookId) => {
   const storedData = getDataFromLocalStorage();
   const exist = storedData.find((dataId) => dataId === bookId);
-  if (!exist) {
+  if (exist) {
+    toast("Book Already Exist");
+  } else {
     storedData.push(bookId);
     localStorage.setItem("read-books", JSON.stringify(storedData));
+    toast.success("Added The Book On Book List");
   }
 };
 
