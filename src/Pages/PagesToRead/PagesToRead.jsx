@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-undef */
-
 import { useLoaderData } from "react-router-dom";
 
 import { useEffect, useState } from "react";
@@ -55,8 +53,14 @@ const PagesToRead = () => {
   // ================================
 
   return (
-    <div className="lg:max-w-7xl mx-auto mt-10 bg-[#F8F8F8]  lg:p-8 rounded-2xl">
-      <div style={{ width: "100%", maxWidth: "1100px", margin: "auto" }}>
+    <div className="lg:max-w-7xl mx-auto    lg:p-8 rounded-2xl">
+      <div className="text-center bg-[#F3F3F3] rounded-2xl mb-10">
+        <h2 className="font-bold text-4xl p-6">Book List Pages Chart</h2>
+      </div>
+      <div
+        className="bg-[#F8F8F8] p-6 mx-auto"
+        style={{ width: "100%", maxWidth: "1100px", margin: "auto" }}
+      >
         <BarChart
           width={window.innerWidth > 1100 ? 1100 : window.innerWidth - 20}
           height={400}

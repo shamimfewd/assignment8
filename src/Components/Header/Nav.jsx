@@ -88,7 +88,7 @@ const Nav = () => {
             to={"/"}
             className="btn btn-ghost text-xl font-bold text-[#23BE0A]"
           >
-            Book Vibe
+            NovelNest
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

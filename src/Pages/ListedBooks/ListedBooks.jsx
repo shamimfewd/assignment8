@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import ReadBooks from "./ReadBooks/ReadBooks";
@@ -11,7 +11,7 @@ const ListedBooks = () => {
   const books = useLoaderData();
   const [displayBooks, setDisplayBooks] = useState([]);
   const [wishListBooks, setWishListBooks] = useState([]);
-  // const [isChecked, setIsChecked] = useState(true);
+  
 
   // read books---------
   useEffect(() => {
@@ -49,16 +49,15 @@ const ListedBooks = () => {
     if (data.length > 0) {
       let result = data.sort((a, b) => b.rating - a.rating);
       setDisplayBooks([...result]);
-    } else {
-      handleTest();
     }
+    handleWishListRating();
   };
 
-  const handleTest = () => {
+  const handleWishListRating = () => {
     let wishBook = [...wishListBooks];
     if (wishBook.length > 0) {
       let result = wishBook.sort((a, b) => b.rating - a.rating);
-      setDisplayBooks([...result]);
+      setWishListBooks([...result]);
     }
   };
 
@@ -68,6 +67,15 @@ const ListedBooks = () => {
     if (pagesData.length > 0) {
       let result = pagesData.sort((a, b) => b.totalPages - a.totalPages);
       setDisplayBooks([...result]);
+    }
+    handleWishListPages();
+  };
+
+  const handleWishListPages = () => {
+    let wishBook = [...wishListBooks];
+    if (wishBook.length > 0) {
+      let result = wishBook.sort((a, b) => b.totalPages - a.totalPages);
+      setWishListBooks([...result]);
     }
   };
 
@@ -79,8 +87,16 @@ const ListedBooks = () => {
       );
       setDisplayBooks([...result]);
     }
+    handleWishListYear();
   };
 
+  const handleWishListYear = () => {
+    let wishBook = [...wishListBooks];
+    if (wishBook.length > 0) {
+      let result = wishBook.sort((a, b) => b.totalPages - a.totalPages);
+      setWishListBooks([...result]);
+    }
+  };
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center bg-[#F3F3F3] rounded-2xl">

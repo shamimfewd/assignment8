@@ -2,6 +2,7 @@ import { GrLocation } from "react-icons/gr";
 import { LuUsers } from "react-icons/lu";
 import { FaBook } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Card = ({ book }) => {
   const {
@@ -9,7 +10,6 @@ const Card = ({ book }) => {
     bookName,
     author,
     image,
-    review,
     category,
     publisher,
     rating,
@@ -30,20 +30,20 @@ const Card = ({ book }) => {
           </figure>
           <div className="card-body">
             <h2 className="card-title text-[#000000ed]">{bookName}</h2>
-            <p className="font-bold text-[#131313cb]">By: {author}</p>
+            <p className=" text-[#131313cb]">By: {author}</p>
             <div className="lg:flex items-center">
               <div className="flex items-center">
                 <span className="font-bold text-[#131313cb]">Tags</span>
                 {tags.map((tag, index) => (
                   <div
                     key={index}
-                    className="font-bold p-2 rounded-full m-1 text-[#23BE0A] bg-[#F4FCF3]"
+                    className=" p-2 rounded-full m-1 text-[#23BE0A] bg-[#F4FCF3]"
                   >
-                    {tag}
+                    #{tag}
                   </div>
                 ))}
               </div>
-              <p className="font-bold  text-[#131313cb] flex items-center gap-x-2">
+              <p className="  text-[#131313cb] flex items-center gap-x-2">
                 <GrLocation />
 
                 <span className="text-[#131313cb]">
@@ -51,7 +51,7 @@ const Card = ({ book }) => {
                 </span>
               </p>
             </div>
-            <div className="lg:flex gap-4 font-bold text-[#131313cb]">
+            <div className="lg:flex gap-4  text-[#131313cb]">
               <h4 className="flex gap-x-2 items-center">
                 <LuUsers /> <span>Publisher: {publisher}</span>
               </h4>
@@ -62,10 +62,10 @@ const Card = ({ book }) => {
 
             <div className="lg:flex  gap-x-4 border-t pt-2">
               <div className="lg:flex  lg:items-center gap-x-2">
-                <div className="bg-[#E0EEFF] text-[#0D99FF] mt-3 lg:mt-0 font-bold p-3 rounded-full">
+                <div className="bg-[#E0EEFF] text-[#0D99FF] mt-3 lg:mt-0  p-3 rounded-full">
                   Category: {category}
                 </div>
-                <h4 className="bg-[#FFF3E0] mt-3 lg:mt-0 text-orange-500 font-bold p-3 rounded-full">
+                <h4 className="bg-[#FFF3E0] mt-3 lg:mt-0 text-orange-500  p-3 rounded-full">
                   Rating: {rating}
                 </h4>
               </div>
@@ -81,5 +81,9 @@ const Card = ({ book }) => {
     </div>
   );
 };
+
+Card.propTypes = {
+  book: PropTypes.object.isRequired
+}
 
 export default Card;

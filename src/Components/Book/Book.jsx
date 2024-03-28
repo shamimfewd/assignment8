@@ -1,16 +1,13 @@
 import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 const Book = ({ book }) => {
-  
   const {
     bookId,
     bookName,
     author,
     image,
-    review,
     category,
-    publisher,
     rating,
     tags,
   } = book;
@@ -52,4 +49,7 @@ const Book = ({ book }) => {
   );
 };
 
+Book.propTypes = {
+  book: PropTypes.object.isRequired,
+};
 export default Book;

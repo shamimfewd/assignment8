@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 
+import PropTypes from 'prop-types';
 import Card from "../../../Components/Card";
 
 const ReadBooks = ({ displayBooks }) => {
@@ -12,5 +12,7 @@ const ReadBooks = ({ displayBooks }) => {
     </div>
   );
 };
-
+ReadBooks.propTypes = {
+  displayBooks: PropTypes.object.isRequired
+}
 export default ReadBooks;

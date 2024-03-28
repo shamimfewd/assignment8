@@ -1,8 +1,21 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Assignment 8 B9
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Name is : NovelNest
+
+Live Link: 
+
+## Features 
+
+- fast routing (you can go to any page without reload)
+- one page application
+- sorting fountionality (you can sort by descending order)
+- it has a chart of book pages (you can see total pages of  books)
+- data seved on localstorage
+
+## Characteristic 
+
+This website uses Reactjs to create a nice-looking design and features. It's specifically designed for a book library. It uses 'react-router dom' so you can easily navigate between pages without the page reloading each time. There are seven pages in total, with five accessible from the navigation bar and two dynamic pages for Book details and blog details.
+
+When you click the 'Read' button, the book is saved in your local storage. The site also has a chart that displays the total pages of each book.

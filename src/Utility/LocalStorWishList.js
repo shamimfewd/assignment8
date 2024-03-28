@@ -1,6 +1,10 @@
+
+
 import { toast } from "react-toastify";
 import { getDataFromLocalStorage } from "./LocalStorage";
 
+
+// get data for wishlist
 const getWishlistDataFromLocalStorage = () => {
   const getData = localStorage.getItem("wishlist-books");
   if (getData) {
@@ -9,6 +13,8 @@ const getWishlistDataFromLocalStorage = () => {
   return [];
 };
 
+
+// set data for wishlist
 const setWishlistDataInLocalStorage = (bookId) => {
   const readData = getDataFromLocalStorage();
   const readDataExist = readData.find((dataId) => dataId === bookId);

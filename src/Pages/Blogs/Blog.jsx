@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 const Blog = ({ blog }) => {
   const {
     id,
     name,
     image,
-    location,
     small_description,
-    year_established,
-    collection_size,
-    special_collections,
   } = blog;
 
   return (
@@ -37,4 +33,7 @@ const Blog = ({ blog }) => {
   );
 };
 
+Blog.propTypes = {
+  blog: PropTypes.object.isRequired,
+};
 export default Blog;

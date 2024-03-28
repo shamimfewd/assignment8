@@ -12,7 +12,7 @@ const BlogDetails = () => {
 
     year_established,
     collection_size,
-    special_collections,
+    
     description,
   } = currentBlog;
   return (
