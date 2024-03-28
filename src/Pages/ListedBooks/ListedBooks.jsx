@@ -11,9 +11,8 @@ const ListedBooks = () => {
   const books = useLoaderData();
   const [displayBooks, setDisplayBooks] = useState([]);
   const [wishListBooks, setWishListBooks] = useState([]);
-  const [isChecked, setIsChecked] = useState(true);
+  // const [isChecked, setIsChecked] = useState(true);
 
- 
   // read books---------
   useEffect(() => {
     const storedBook = getDataFromLocalStorage();
@@ -50,8 +49,9 @@ const ListedBooks = () => {
     if (data.length > 0) {
       let result = data.sort((a, b) => b.rating - a.rating);
       setDisplayBooks([...result]);
+    } else {
+      handleTest();
     }
-    handleTest();
   };
 
   const handleTest = () => {
@@ -121,8 +121,7 @@ const ListedBooks = () => {
           role="tab"
           className="tab"
           aria-label="Read Books"
-          checked={isChecked}
-          
+          checked
         />
 
         <div
