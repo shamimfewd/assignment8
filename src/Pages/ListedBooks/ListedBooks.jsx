@@ -1,16 +1,19 @@
+/* eslint-disable no-undef */
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import ReadBooks from "./ReadBooks/ReadBooks";
 import { getDataFromLocalStorage } from "../../Utility/LocalStorage";
 import WishList from "./WishList/WishList";
 import { getWishlistDataFromLocalStorage } from "../../Utility/LocalStorWishList";
-
+import { IoIosArrowDown } from "react-icons/io";
 
 const ListedBooks = () => {
   const books = useLoaderData();
   const [displayBooks, setDisplayBooks] = useState([]);
   const [wishListBooks, setWishListBooks] = useState([]);
+  const [isChecked, setIsChecked] = useState(true);
 
+ 
   // read books---------
   useEffect(() => {
     const storedBook = getDataFromLocalStorage();
@@ -25,8 +28,6 @@ const ListedBooks = () => {
       setDisplayBooks(display);
     }
   }, [books]);
-
-  
 
   // Wishlist books--------------
   useEffect(() => {
@@ -43,21 +44,73 @@ const ListedBooks = () => {
     }
   }, [books]);
 
+  // ==============================================================================
+  const handleRating = () => {
+    let data = [...displayBooks];
+    if (data.length > 0) {
+      let result = data.sort((a, b) => b.rating - a.rating);
+      setDisplayBooks([...result]);
+    }
+    handleTest();
+  };
+
+  const handleTest = () => {
+    let wishBook = [...wishListBooks];
+    if (wishBook.length > 0) {
+      let result = wishBook.sort((a, b) => b.rating - a.rating);
+      setDisplayBooks([...result]);
+    }
+  };
+
+  // ==============================================================
+  const handlePages = () => {
+    let pagesData = [...displayBooks];
+    if (pagesData.length > 0) {
+      let result = pagesData.sort((a, b) => b.totalPages - a.totalPages);
+      setDisplayBooks([...result]);
+    }
+  };
+
+  const handleYear = () => {
+    let pagesData = [...displayBooks];
+    if (pagesData.length > 0) {
+      let result = pagesData.sort(
+        (a, b) => b.yearOfPublishing - a.yearOfPublishing
+      );
+      setDisplayBooks([...result]);
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center bg-[#F3F3F3] rounded-2xl">
         <h2 className="font-bold text-4xl p-6">Books</h2>
       </div>
-      {/* sort button */}
-      
+
+      {/* sort button ------------------------*/}
       <div className="text-center mt-4">
-        <select className="select shadow-none border-none outline-none font-bold bg-[#23BE0A] text-white px-4 py-2 rounded-md">
-          <option disabled selected>
-            Select an option
-          </option>
-          <option value="han-solo">Han Solo</option>
-          <option value="greedo">Greedo</option>
-        </select>
+        <details className={`dropdown `}>
+          <summary className="m-1 btn text-white bg-[#23BE0A]">
+            Sort By
+            <IoIosArrowDown />
+          </summary>
+          <ul className="p-2 text-white shadow menu dropdown-content z-[1] bg-[#23BE0A]  rounded-box w-52">
+            {/* -------------------------------------- */}
+
+            <li onClick={handleRating}>
+              <a>Rating</a>
+            </li>
+
+            {/* -------------------------------------- */}
+
+            <li onClick={handlePages}>
+              <a>Number of Pages</a>
+            </li>
+            <li onClick={handleYear}>
+              <a>Publisher Year</a>
+            </li>
+          </ul>
+        </details>
       </div>
 
       {/* tab list */}
@@ -68,7 +121,8 @@ const ListedBooks = () => {
           role="tab"
           className="tab"
           aria-label="Read Books"
-          checked
+          checked={isChecked}
+          
         />
 
         <div

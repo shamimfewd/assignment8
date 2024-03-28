@@ -55,32 +55,37 @@ const PagesToRead = () => {
   // ================================
 
   return (
-    <div className="max-w-7xl mx-auto mt-10 bg-[#F8F8F8] p-8 rounded-2xl">
-      <BarChart
-        width={1200}
-        height={400}
-        data={mappedData}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Bar
-          dataKey="uv"
-          fill="#8884d8"
-          shape={<TriangleBar />}
-          label={{ position: "top" }}
+    <div className="lg:max-w-7xl mx-auto mt-10 bg-[#F8F8F8]  lg:p-8 rounded-2xl">
+      <div style={{ width: "100%", maxWidth: "1100px", margin: "auto" }}>
+        <BarChart
+          width={window.innerWidth > 1100 ? 1100 : window.innerWidth - 20}
+          height={400}
+          data={mappedData}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
         >
-          {mappedData.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-          ))}
-        </Bar>
-      </BarChart>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Bar
+            dataKey="uv"
+            fill="#8884d8"
+            shape={<TriangleBar />}
+            label={{ position: "top" }}
+          >
+            {mappedData.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={colors[index % colors.length]}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </div>
     </div>
   );
 };

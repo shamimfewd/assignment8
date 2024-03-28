@@ -37,7 +37,7 @@ const BookDetails = () => {
           <img
             src={image}
             alt="image"
-            className="h-[35rem] w-full bg-[#F2F2F2] p-16 rounded-2xl"
+            className="h-[35rem] w-full bg-[#F2F2F2] p-4  lg:p-16 rounded-2xl"
           />
         </figure>
         <div className="card-body">
@@ -64,22 +64,22 @@ const BookDetails = () => {
           </div>
           <div className="space-y-4 mt-6">
             <div className="text-[#131313b1] flex">
-              <h4 className="mr-44 font-bold"> Number of Pages:</h4>
+              <h4 className="mr-6 lg:mr-44 font-bold"> Number of Pages:</h4>
 
               <span className="font-bold text-[#131313ed]">{totalPages}</span>
             </div>
             <div className="text-[#131313b1] flex">
-              <h4 className="mr-60 font-bold"> Publisher:</h4>
+              <h4 className="mr-6 lg:mr-60 font-bold"> Publisher:</h4>
               <span className="font-bold text-[#131313ed]">{publisher}</span>
             </div>
             <div className="text-[#131313b1] flex">
-              <h4 className="mr-44 font-bold">Year of Publishing:</h4>
+              <h4 className="mr-6 lg:mr-44 font-bold">Year of Publishing:</h4>
               <span className="font-bold text-[#131313ed]">
                 {yearOfPublishing}
               </span>
             </div>
             <div className="text-[#131313b1] flex">
-              <h4 className="mr-[16.5rem] font-bold"> Rating:</h4>
+              <h4 className="mr-6 lg:mr-[16.5rem] font-bold"> Rating:</h4>
               <span className="font-bold text-[#131313ed]"> {rating}</span>
             </div>
           </div>
@@ -96,8 +96,8 @@ const BookDetails = () => {
             >
               Wish List
             </button>
-            <Link to={"/"}>
-              <button className="btn btn-primary text-white">Go Back</button>
+            <Link to={"/"} className="w-full lg:w-auto">
+              <button className="btn w-full  btn-primary text-white">Go Back</button>
             </Link>
           </div>
         </div>

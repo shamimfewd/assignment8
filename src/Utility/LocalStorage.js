@@ -16,7 +16,7 @@ const setDataInLocalStorage = (bookId) => {
   } else {
     storedData.push(bookId);
     localStorage.setItem("read-books", JSON.stringify(storedData));
-    toast.success("Added The Book To Book List");
+    toast.success("Book Added To Book List");
   }
 };
 

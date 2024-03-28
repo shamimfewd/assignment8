@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Library of Congress",
+    "subtitle": "World's Largest Library",
+    "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/31/cd/d2.jpg",
+    "location": "Washington D.C., USA",
+    "year_established": 1800,
+    "collection_size": "170 million+ items",
+    "special_collections": [
+      "Thomas Jefferson's personal library",
+      "Gutenberg Bible",
+      "Maps, photographs, and prints"
+    ],
+    "description": "The Library of Congress in Washington D.C., USA, established in 1800, holds over 170 million items and is renowned for its vast collection. Notable treasures include Thomas Jefferson's personal library, the Gutenberg Bible, and a wealth of maps, photographs, and prints. As the largest library in the world, it serves as a symbol of knowledge and cultural heritage, preserving invaluable historical and literary artifacts. Its diverse collections attract scholars, researchers, and visitors worldwide, offering a glimpse into centuries of human creativity, innovation, and knowledge preservation.",
+    "small_description": "World's largest library with a vast collection of historical artifacts and literary treasures."
+  },
+  {
+    "id": 2,
+    "name": "British Library",
+    "subtitle": "Iconic UK Institution",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/British_library_london.jpg",
+    "location": "London, UK",
+    "year_established": 1973,
+    "collection_size": "170 million+ items",
+    "special_collections": [
+      "Magna Carta",
+      "Shakespeare's First Folio",
+      "Leonardo da Vinci's notebook"
+    ],
+    "description": "The British Library, located in London, UK, was established in 1973 and houses a vast collection exceeding 170 million items. Its special collections include iconic works such as the Magna Carta, Shakespeare's First Folio, and Leonardo da Vinci's notebook. As one of the world's largest libraries, it plays a pivotal role in preserving and promoting global knowledge and cultural heritage. Scholars and enthusiasts from around the globe visit this historic institution to explore its rich archives, rare manuscripts, and literary treasures, making it a hub for research, education, and intellectual discovery.",
+    "small_description": "Iconic institution housing a vast collection of rare manuscripts and literary works."
+  },
+  {
+    "id": 3,
+    "name": "Library and Archives Canada",
+    "subtitle": "Canada's National Repository",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Library_and_Archives_Canada.JPG",
+    "location": "Ottawa, Canada",
+    "year_established": 2004,
+    "collection_size": "54 million+ items",
+    "special_collections": [
+      "Lester B. Pearson's papers",
+      "Louis Riel collection",
+      "Rare books and manuscripts"
+    ],
+    "description": "The Library and Archives Canada in Ottawa, Canada, established in 2004, houses a diverse collection of over 54 million items. Its special collections feature significant artifacts such as Lester B. Pearson's papers, the Louis Riel collection, and rare books and manuscripts. Serving as Canada's national library and archives, it preserves the country's cultural heritage and historical records. Researchers, historians, and the public access its resources to explore Canada's past, culture, and contributions to global knowledge. The institution's commitment to accessibility and preservation makes it a vital resource for education, research, and cultural appreciation.",
+    "small_description": "Canada's national library and archives preserving cultural heritage and historical records."
+  },
+  {
+    "id": 4,
+    "name": "New York Public Library",
+    "subtitle": "Cultural Hub of NYC",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/New_York_Public_Library_-_Main_Branch_%2851396225599%29.jpg",
+    "location": "New York City, USA",
+    "year_established": 1895,
+    "collection_size": "55+ million items",
+    "special_collections": [
+      "Manuscripts and archives",
+      "Rare books and prints",
+      "Map Division"
+    ],
+    "description": "The New York Public Library, founded in 1895 and located in New York City, USA, boasts a collection exceeding 55 million items. Its special collections include rare manuscripts and archives, valuable books and prints, and a dedicated Map Division. As a historic institution, it serves as a cultural and educational hub, offering resources for research, learning, and exploration. The library's iconic locations, such as the Stephen A. Schwarzman Building, attract visitors worldwide. Its commitment to preserving knowledge, fostering literacy, and promoting access to information makes it an integral part of New York City's cultural landscape.",
+    "small_description": "Historic library and cultural hub with rare manuscripts and educational resources."
+  },
+  {
+    "id": 5,
+    "name": "Russian State Library",
+    "subtitle": "Guardian of Russian Culture",
+    "image": "https://all-andorra.com/wp-content/uploads/2022/11/Russian-State-Library-min.png",
+    "location": "Moscow, Russia",
+    "year_established": 1862,
+    "collection_size": "46.4 million items",
+    "special_collections": [
+      "Rare books and manuscripts",
+      "Petrovsky collection",
+      "Lomonosov's library"
+    ],
+    "description": "The Russian State Library, founded in 1862 and situated in Moscow, Russia, houses a comprehensive collection exceeding 46.4 million items. Noteworthy special collections include rare books and manuscripts, the Petrovsky collection, and Lomonosov's library. As Russia's national library, it plays a vital role in preserving the country's literary heritage and historical documents. Researchers, scholars, and the public access its extensive resources to delve into Russian history, culture, and literature. The library's commitment to knowledge preservation, digital initiatives, and cultural exchange contributes significantly to academic research and intellectual discourse within Russia and globally.",
+    "small_description": "Guardian of Russian literary heritage with extensive collections and cultural resources."
+  },
+  {
+    "id": 6,
+    "name": "National Library of China",
+    "subtitle": "Preserving China's Legacy",
+    "image": "https://external-preview.redd.it/CJ8jT5lS_iptIuw15tr76_o3FaXppXTT5h1lvM25PQU.jpg?auto=webp&s=a86b584cb219aa6caca2e52ec083bb0d741e4b19",
+    "location": "Beijing, China",
+    "year_established": 1909,
+    "collection_size": "37 million+ items",
+    "special_collections": [
+      "Ancient Chinese books",
+      "Tangut manuscripts",
+      "Rare maps and documents"
+    ],
+    "description": "The National Library of China, established in 1909 and located in Beijing, China, is home to a vast collection of over 37 million items. Its special collections include ancient Chinese books, Tangut manuscripts, and rare maps and documents, showcasing China's rich cultural and historical legacy. As China's largest library, it serves as a central repository of knowledge, offering resources for research, education, and cultural exploration. Scholars, historians, and the public access its archives to study Chinese history, literature, and art, making it a vital institution for preserving and promoting China's cultural heritage and intellectual achievements.",
+    "small_description": "Central repository of Chinese knowledge with a focus on cultural heritage and historical legacies."
+  }
+]

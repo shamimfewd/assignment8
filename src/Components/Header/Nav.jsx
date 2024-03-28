@@ -61,6 +61,27 @@ const Nav = () => {
                   Page to Read
                 </NavLink>
               </li>
+
+              <li>
+                <NavLink
+                  to={"/blogs"}
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
+                  Blogs
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/bestseller"}
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
+                  Best Seller
+                </NavLink>
+              </li>
             </ul>
           </div>
           <Link
@@ -101,6 +122,28 @@ const Nav = () => {
                 }
               >
                 Page to Read
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to={"/blogs"}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Blogs
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to={"/bestseller"}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Best Seller
               </NavLink>
             </li>
           </ul>

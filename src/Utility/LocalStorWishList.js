@@ -13,7 +13,7 @@ const setWishlistDataInLocalStorage = (bookId) => {
   const readData = getDataFromLocalStorage();
   const readDataExist = readData.find((dataId) => dataId === bookId);
   if (readDataExist) {
-    toast("Already Read The Book");
+    toast("You have Already Read the Book");
   } else {
     const storedData = getWishlistDataFromLocalStorage();
     const exist = storedData.find((dataId) => dataId === bookId);
